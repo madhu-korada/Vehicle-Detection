@@ -43,3 +43,51 @@ TensorFlow was chosen as the framework for vehicle detection based on the follow
 
 - Keras compatible
 
+# CNN Architecture
+
+CNNs are Multilayer Neural Networks designed to recognize visual patterns directly from pixel images with minimal preprocessing. CNNs use relatively little pre-processing compared to other image classification algorithms. This means that the network learns the filters that in traditional algorithms were hand-engineered. This independence from prior knowledge and human effort in feature design is a major advantage. They have applications in image and video recognition, recommender systems and natural language processing.
+
+There are different CNN architectures such as R-CNN, Fast R-CNN, Faster R-CNN, SPP-Net, YOLO, SSD which are used for object detection. There are two ways of approaching it:
+
+
+
+
+
+
+
+-	Detection as a Classification Problem: R-CNN and its variants & SPP-Net.
+
+- Detection as a Regression Problem: YOLO (You Only Look Once) and SSD (Single Shot Detector).
+
+![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/img)
+
+
+YOLO was chosen as the object detector in this case because of the following reasons:
+
+-	State-of-the-art object detector at present
+
+- Real-time object detection (30 FPS)
+
+-	Good mean Average Precision (mAP) value
+
+-	Good accuracy and speed over a variety of datasets 
+
+-	Availability of pre-trained weights
+
+![alt text](https://github.com/madhu-korada/img)
+
+The YOLO v3 network Architecture was implemented using Darknet in Python. It is a 106 layer fully convolutional underlying architecture. Detection takes place at three scales - big objects, medium objects and small objects. It detects big objects as 13x13 grid at 82nd layer, medium objects as 26x26 grid at 94th layer and small objects as 52x52 grid at 106th layer.  There are 10,647 bounding boxes for a 416x416 image. It also supports multilabel classification.
+
+
+# Dataset
+It is a large collection of images which are annotated. These images are used for training the network, if it is not already pre-trained.  Each dataset will have a certain number of classes. Based on these classes, the datasets are chosen for appropriate applications. 
+
+There are lots of datasets from which COCO dataset was chosen. It has 80 classes with more than 200,000 images. 18 classes considered relevant to driving in India were chosen from the overall 80 and the network was trained to detect only these classes.
+
+![alt text](https://github.com/madhu-korada/img)
+
+# Implementation
+
+The algorithm was implemented in Python as it is simple as well as the best language to use with TensorFlow Framework. Spyder IDE from Anaconda (Python Distribution) was used for running the code.
+
