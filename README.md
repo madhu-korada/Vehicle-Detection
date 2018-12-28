@@ -23,7 +23,7 @@ A Deep Learning Framework is a building block for designing, training and valida
 
 There are a variety of deep learning frameworks available. Each framework is built in a different manner for different purposes. They vary based on the languages they support, CNN modeling capability, RNN modeling capability, speed, etc. The comparison of the frameworks is given below.
 
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/1.png)
 
 TensorFlow was chosen as the framework for vehicle detection based on the following factors:
 
@@ -59,8 +59,8 @@ There are different CNN architectures such as R-CNN, Fast R-CNN, Faster R-CNN, S
 
 - Detection as a Regression Problem: YOLO (You Only Look Once) and SSD (Single Shot Detector).
 
-![alt text](https://github.com/madhu-korada/img)
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/2.png)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/3.png)
 
 
 YOLO was chosen as the object detector in this case because of the following reasons:
@@ -75,7 +75,7 @@ YOLO was chosen as the object detector in this case because of the following rea
 
 -	Availability of pre-trained weights
 
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/4.png)
 
 The YOLO v3 network Architecture was implemented using Darknet in Python. It is a 106 layer fully convolutional underlying architecture. Detection takes place at three scales - big objects, medium objects and small objects. It detects big objects as 13x13 grid at 82nd layer, medium objects as 26x26 grid at 94th layer and small objects as 52x52 grid at 106th layer.  There are 10,647 bounding boxes for a 416x416 image. It also supports multilabel classification.
 
@@ -85,7 +85,7 @@ It is a large collection of images which are annotated. These images are used fo
 
 There are lots of datasets from which COCO dataset was chosen. It has 80 classes with more than 200,000 images. 18 classes considered relevant to driving in India were chosen from the overall 80 and the network was trained to detect only these classes.
 
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/5.png)
 
 # Implementation
 
@@ -95,17 +95,18 @@ The algorithm was implemented in Python as it is simple as well as the best lang
 
 The code was executed on a laptop as an offline process (acquiring the video and processing it later) with the following specifications.
 
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/6.png)
 
 # Results
 
 The output videos for different conditions (day and night) were saved and some of the snapshots are attached.
 
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/7.png)
 
 The CSV files were also created and saved simultaneously with the output video in the same directory. A sample part of a CSV file is shown below. 
 
-![alt text](https://github.com/madhu-korada/img)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/8.png)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/tree/master/pics/9.png)
 
 It consists of the frame number, object number (in that particular frame), type of object, its confidence score and the coordinates of the bounding box. This data can be synchronized with RADAR data and the working of RADAR sensor can be validated using this data, after improving the accuracy of the algorithm.
 
