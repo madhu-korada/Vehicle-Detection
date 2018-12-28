@@ -61,7 +61,7 @@ There are different CNN architectures such as R-CNN, Fast R-CNN, Faster R-CNN, S
 - Detection as a Regression Problem: YOLO (You Only Look Once) and SSD (Single Shot Detector).
 
 
-alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/2.png)
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/2.png)
 
 
 ![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/3.jpg)
@@ -111,13 +111,12 @@ The output videos for different conditions (day and night) were saved and some o
 ![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/7.png)
 
 
-The CSV files were also created and saved simultaneously with the output video in the same directory. A sample part of a CSV file is shown below. 
-
-
 ![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/8.png)
 
 
-![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/9.png)
+The CSV files were also created and saved simultaneously with the output video in the same directory. A sample part of a CSV file is shown below. 
+
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/9.jpg)
 
 
 It consists of the frame number, object number (in that particular frame), type of object, its confidence score and the coordinates of the bounding box. This data can be synchronized with RADAR data and the working of RADAR sensor can be validated using this data, after improving the accuracy of the algorithm.
