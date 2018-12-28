@@ -91,3 +91,44 @@ There are lots of datasets from which COCO dataset was chosen. It has 80 classes
 
 The algorithm was implemented in Python as it is simple as well as the best language to use with TensorFlow Framework. Spyder IDE from Anaconda (Python Distribution) was used for running the code.
 
+# Execution 
+
+The code was executed on a laptop as an offline process (acquiring the video and processing it later) with the following specifications.
+
+![alt text](https://github.com/madhu-korada/img)
+
+# Results
+
+The output videos for different conditions (day and night) were saved and some of the snapshots are attached.
+
+![alt text](https://github.com/madhu-korada/img)
+
+The CSV files were also created and saved simultaneously with the output video in the same directory. A sample part of a CSV file is shown below. 
+
+![alt text](https://github.com/madhu-korada/img)
+
+It consists of the frame number, object number (in that particular frame), type of object, its confidence score and the coordinates of the bounding box. This data can be synchronized with RADAR data and the working of RADAR sensor can be validated using this data, after improving the accuracy of the algorithm.
+
+# Accuracy Evaluation
+
+The accuracy of the algorithm was calculated by the following steps:
+
+1.	A set of 100 frames with equal intervals between them were acquired from the video.
+
+2.	All the false positives and false negatives were identified manually.
+
+3.	This data was verified with the corresponding frame data from the CSV file.
+
+4.	The mean Average Precision (mAP) was calculated based on this.
+
+Initially, the mAP was above 90% for day-time videos and was less than 50% for night-time videos. After a slight improvement in the night time videos by converting each frame from RGB to HSV and increasing its intensity before converting it back to RGB for processing, the mAP value increased a little. This network works good for the day scenario but for it to work at night with the same accuracy, image preprocessing still has to be done. 
+
+In general, some false positives were reduced by increasing the confidence score and false negatives up to a certain extent were eliminated by training with the most relevant images. 
+
+# Conclusion
+
+Thus Vehicle Detection using reference camera data was performed successfully on the given videos. 
+
+The Vehicle Detection algorithm performed up to the requirements based on the given constraints under most of the conditions. The detection in night time can be improved to get a higher mAP score with further image processing. Vehicle Detection has its applications directly in autonomous vehicles and ADAS such as Forward Collision warning, etc. when implemented in real time. 
+
+Future work could be done in these areas to optimize the program and make it more efficient and to increase the accuracy.
