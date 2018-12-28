@@ -44,6 +44,14 @@ TensorFlow was chosen as the framework for vehicle detection based on the follow
 
 - Keras compatible
 
+
+
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/2.png)
+
+
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/3.jpg)
+
+
 # CNN Architecture
 
 CNNs are Multilayer Neural Networks designed to recognize visual patterns directly from pixel images with minimal preprocessing. CNNs use relatively little pre-processing compared to other image classification algorithms. This means that the network learns the filters that in traditional algorithms were hand-engineered. This independence from prior knowledge and human effort in feature design is a major advantage. They have applications in image and video recognition, recommender systems and natural language processing.
@@ -52,7 +60,7 @@ There are different CNN architectures such as R-CNN, Fast R-CNN, Faster R-CNN, S
 
 
 
-
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/4.png)
 
 
 
@@ -61,10 +69,6 @@ There are different CNN architectures such as R-CNN, Fast R-CNN, Faster R-CNN, S
 - Detection as a Regression Problem: YOLO (You Only Look Once) and SSD (Single Shot Detector).
 
 
-![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/2.png)
-
-
-![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/3.jpg)
 
 
 YOLO was chosen as the object detector in this case because of the following reasons:
@@ -79,7 +83,8 @@ YOLO was chosen as the object detector in this case because of the following rea
 
 -	Availability of pre-trained weights
 
-![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/4.png)
+
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/5.png)
 
 
 The YOLO v3 network Architecture was implemented using Darknet in Python. It is a 106 layer fully convolutional underlying architecture. Detection takes place at three scales - big objects, medium objects and small objects. It detects big objects as 13x13 grid at 82nd layer, medium objects as 26x26 grid at 94th layer and small objects as 52x52 grid at 106th layer.  There are 10,647 bounding boxes for a 416x416 image. It also supports multilabel classification.
@@ -90,7 +95,9 @@ It is a large collection of images which are annotated. These images are used fo
 
 There are lots of datasets from which COCO dataset was chosen. It has 80 classes with more than 200,000 images. 18 classes considered relevant to driving in India were chosen from the overall 80 and the network was trained to detect only these classes.
 
-![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/5.png)
+
+![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/6.png)
+
 
 
 # Implementation
@@ -101,7 +108,7 @@ The algorithm was implemented in Python as it is simple as well as the best lang
 
 The code was executed on a laptop as an offline process (acquiring the video and processing it later) with the following specifications.
 
-![alt text](https://github.com/madhu-korada/Vehicle-Detection/blob/master/pics/6.png)
+
 
 
 # Results
